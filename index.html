@@ -1,0 +1,91 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Todo List</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <h1 class="title">GET IT DONE</h1>
+    <div class="all-tasks"> 
+      <h2 class="task-list-title">Todo Lists</h2>
+      <ul class="task-list">
+        <li class = "active-list">Dog Stuff</li>
+        <li>Work</li>
+        <li>Study</li>
+      </ul>
+
+      <form action="">
+        <input
+         type="text"
+         class="new list"
+         placeholder="new list name"
+         aria-lable="new list name"
+        />
+        <button class="btn list" aria-label="create new list">+</button>
+      </form>
+
+    </div>
+    <div class="todo-list">
+      <div class="todo-header">
+        <h2 class="list-title"> Dog Stuff</h2>
+        <p class="task-count">3 tasks remaining</p>
+        </div>
+        <div class="todo-body">
+          <div class="tasks">
+            <div class="task">
+              <input 
+                type="checkbox"
+                id="task-1"
+              />
+              <label for="task-1"> 
+                <span class="custom-checkbox"></span>
+                Buy dog bones
+              </label>
+            </div>
+            <!--end of task-1-->
+          </div>
+          <div class="task">
+            <input 
+              type="checkbox"
+              id="task-2"
+            />
+            <label for="task-2"> 
+              <span class="custom-checkbox"></span>
+              Book sniffing trial
+            </label>
+          </div>
+          <!--end of task-2-->
+        </div>
+        <div class="task">
+          <input 
+            type="checkbox"
+            id="task-3"
+          />
+          <label for="task-3"> 
+            <span class="custom-checkbox"></span>
+            Rally-O Trial
+          </label>
+        </div>
+        <!--end of task-3-->
+      </div>
+
+          <div class="new-task-creator">
+
+          </div>
+          <div class="delete-tasks">
+
+          </div>
+        </div>
+    </div>
+
+    </body>
+</html>
