@@ -1,0 +1,29 @@
+{
+  "name": "tododata",
+  "version": "1.0.0",
+  "description": "todo list data",
+  "main": "script.js",
+  "scripts": {
+    "test": "testtodo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jocelyn-hing/todolist.git"
+  },
+  "keywords": [
+    "to",
+    "do",
+    "list",
+    "todolist"
+  ],
+  "author": "Jocelyn Hing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jocelyn-hing/todolist/issues"
+  },
+  "homepage": "https://github.com/jocelyn-hing/todolist#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2"
+  }
+}

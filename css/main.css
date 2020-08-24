@@ -1,9 +1,9 @@
  
 :root {
-    --clr-primary: rgb(209, 134, 179);
+    --clr-primary: rgb(138, 167, 158);
     --clr-light: #f4f4f4;
     --clr-dark: #333;
-    --clr-warning: rgb(99, 36, 36);
+    --clr-warning: rgb(36, 60, 99);
 }
   
 *,
@@ -31,10 +31,10 @@ grid:
     grid-area: header;
     text-align: centre;
     font-size: calc(7vw + 2rem);
-    font-weight: 300;
+    font-weight: 500;
     color: rgba(0, 0, 0, 0.1);
     letter-spacing: 1px;
-    margin: 0.25em 2em 2em 0.5em;
+    margin: 0.25em 2em 0.75em 0.5em;
 }
 
 .all-tasks {
