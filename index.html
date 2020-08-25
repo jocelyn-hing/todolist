@@ -15,27 +15,25 @@
   </head>
 
   <body>
-    <h1 class="title">GET IT DONE</h1>
+    <h1 class="title">GOAL DIGGER</h1>
     <div class="all-tasks"> 
       <h2 class="task-list-title">Lists</h2>
       <ul class="task-list" data-lists></ul>
-
       <form action="" data-new-list-form>
         <input
          type="text"
          class="new list"
          data-new-list-input
-         placeholder="new list name"
-         aria-label="new list name"
+         placeholder="add list"
+         aria-label="add list"
         />
         <button class="btn create" aria-label="create new list">+</button>
       </form>
-
     </div>
     <div class="todo-list" data-list-display-container>
       <div class="todo-header">
-        <h2 class="list-title" data-list-title> Dog Stuff</h2>
-        <p class="task-count" data-list-count>3 tasks remaining</p>
+        <h2 class="list-title" data-list-title> </h2>
+        <p class="task-count" data-list-count> </p>
       </div>
 
         <div class="todo-body">
@@ -46,13 +44,15 @@
                type="text"
                data-new-task-input
                class="new task"
-               placeholder="new task name"
-               aria-lable="new task name"
+               placeholder="add task"
+               aria-lable="add task"
               />
               <button class="btn create" aria-label="create new task">+</button>
             </form>
             <div class="delete-tasks">
-              <button class="btn delete" data-clear-completed-tasks-button > Clear completed tasks</button>
+              <button class="btn delete" data-clear-completed-tasks-button > Delete Tasks</button>
+            </div>
+            <div class="delete-tasks">
               <button class="btn delete" data-delete-list-button > Delete List</button>
             </div>
           </div>
@@ -60,6 +60,8 @@
       </div>
     </div>
 
+<!-- the template isn't shown to the end user because the parser processes the template when loading the page, it just checks if the contents is valid
+However it won't render the template until js instansiates it   -->
     <template id="task-template">
       <div class="task">
         <input 

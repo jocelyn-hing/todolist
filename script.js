@@ -10,14 +10,15 @@ const taskTemplate = document.getElementById('task-template')
 const newTaskForm = document.querySelector('[data-new-task-form]')
 const newTaskInput = document.querySelector('[data-new-task-input]')
 const clearCompleteTasksButton = document.querySelector('[data-clear-completed-tasks-button]')
-
+// local storage is the browser storage that you can access for your website on their machine
 //namespace prevents you/others overriding info that is already in local storage
 const LOCAL_STORAGE_LIST_KEY = 'task.lists'
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = 'task.selectedListId'
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []
 let selectedListId = localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY)
 
-
+// it adds an event listener that looks at the tagname to check if it is a indexed list element. 
+// it create a variable called selectedListId and assigns it the value of the targeted listId
 listsContainer.addEventListener('click', e=> {
     if (e.target.tagName.toLowerCase() === 'li') {
         selectedListId = e.target.dataset.listId
@@ -60,7 +61,6 @@ newListForm.addEventListener('submit', e=> {
     saveAndRender()
 })
 
-//adds and creates new tasks 
 newTaskForm.addEventListener('submit', e=> {
     e.preventDefault()
     const taskName = newTaskInput.value
@@ -139,7 +139,7 @@ function renderTaskCount(selectedList) {
     })
  }
 
-
+// getting around having to think about how the list will react to elements being added or removed 
 function clearElement(element) {
     while(element.firstChild){
         element.removeChild(element.firstChild)

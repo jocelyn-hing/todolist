@@ -88,10 +88,6 @@ form {
     transition: color 200ms;
 }
 
-.btn.delete:hover {
-    color: var(--clr-warning);
-}
-
 .new {
     background: transparent;
     border: 0;
@@ -130,7 +126,6 @@ form {
 
 .todo-list {
     --spacer: 2rem;
-
     grid-area: active;
     background: var(--clr-light);
     color:var(--clr-dark);
@@ -159,7 +154,7 @@ form {
 }
 
 .new-task-creator .create {
-    colour: var(--clr-dark);
+    color: var(--clr-dark);
 }
 
 [type="checkbox"] {
@@ -238,13 +233,47 @@ form {
 [type="checkbox"]:checked + label::after {
     transform: scaleX(1);
 }
-
-.delete-tasks {
+.delete-tasks{
+    position: relative;
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid var(--clr-primary);
+    margin:1.5em 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:var(--clr-primary);
+    text-align:center;
+    transition: all 0.2s;
+}
+.delete-tasks:hover{
+    color: var(--clr-light);
+    background-color:var(--clr-primary);
+}
+@media all and (max-width:30em){
+    .delete-tasks{
+        display:block;
+        margin:0.4em auto;
+    }
+}
+/* .delete-tasks {
     display: flex;
     justify-content: space-around;
-    position: absolute;
+    position: relative;
     width: 100%; 
     left: 0;
-    bottom: -35px;
+    bottom: -50px;
     color: var(--clr-light);
+    background-color: rgb(100, 138, 126);
+    border-radius: 28px;
+    border:1px solid rgb(76, 107, 103);
+	display:inline-block;
+    height: var(--size);
+    padding:0.35em 1.2em;
 }
+
+.delete-tasks:hover {
+	background-color: rgb(76, 107, 103);
+} */
